@@ -1,0 +1,327 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*Fonts*/
+
+@font-face {
+	font-family: Berthold;
+	src: url('../fonts/Berthold.otf');
+}
+
+
+
+
+
+
+div.wrapper {
+	width: 100%;
+	float: left;
+}
+
+div.wrapper#white {
+	background: white;
+}
+
+div.wrapper#blue {
+	background: #19c6dc;
+	height: 600px;
+}
+
+div.wrapper#black {
+	background: #343434;
+}
+
+
+
+/* Header Styles */
+
+header {
+	width: 960px;
+	margin: 0 auto;
+}
+
+header img {
+	float: left;
+}
+
+header h1 {
+	font: 26px "Arial Black";
+	margin: 25px 0 0 10px;
+	float: left;
+}
+
+header nav {
+	float: right;
+	width: 400px;
+	
+}
+
+header nav ul {
+	margin-top: 30px;
+	width: 200px;
+	float: right;
+}
+
+header nav ul li a {
+	color: black;
+	float: left;
+	width: 80px;
+	font: 28px "Berthold";
+	text-decoration: none;
+}
+
+/* CTA Styles */
+ #cta {
+	 clear: both;
+	 background: black;
+	 margin: 95px auto 50px;
+	 width: 620px;
+	 height: 220px;
+	 outline: 2px dashed white;
+	 outline-offset: -8px;
+ }
+ 
+ #cta h2:first-child {
+	 font: 48px "Arial Black";
+	 padding-top: 30px;
+	 color: white;
+	 text-align: center;
+ }
+ 
+ #cta hr {
+	 width: 500px;
+	 height: 2px;
+	 margin-top: 20px;
+	 margin-bottom: 20px;
+	 border: 0;
+	 background-color: #15e6ff;
+ }
+ 
+ #cta h2:nth-child(3) {
+	 font: 24px "Arial Black";
+	 text-align: center;
+	 color: white;
+ }
+ 
+/* Video Styles */
+
+div#video_container {
+	width: 960px;
+	margin: 40px auto 0;
+}
+
+#prev_video {
+	float: left;
+	margin: 220px 25px 0;
+}
+
+div#pretend_video {
+	float: left;
+	width: 740px;
+	height: 480px;
+	padding-bottom: 20px;
+}
+
+div#video_controls {
+	float: left;
+	width: 100%;
+	height: 40px;
+	background: black;
+	overflow: hidden;
+}
+
+div#seek_bar {
+	height: 12px;
+	background: url(../images/scrubber_bg.gif) repeat;
+}
+
+div#video_controls a, img {
+	float: left;
+}
+
+div#video_controls #playandpause {
+	float: left;
+	margin: 5px 0 0 10px;
+}
+
+div#video_controls p {
+	color: white;
+	font: 16px Berthold;
+	float: left;
+	margin: 5px 0 0 10px;
+}
+
+div#video_controls #record {
+	margin-left: 280px;
+}
+
+div#video_controls #audio_sources {
+	margin: 5px 3px 0 150px;
+}
+
+div#sources_container {
+	position: relative;
+	background: black;
+	opacity: 1;
+	float: left;
+	width: 100%;
+	height: 25px;
+}
+
+div#sources_container ul {
+	left: 20px;
+	position: absolute;
+	color: white;
+	font: 16px Arial;
+}
+
+div#sources_container ul li {
+	float: left;
+	padding: 0 5px;
+}
+
+div#video_controls #seperator {
+	margin: 5px 0 0 0px;
+}
+
+div#video_controls #video_sources {
+	margin: 5px 0 0 3px;
+}
+
+div#volume_bar > img:first-child {
+	margin: 5px 4px 0 20px;
+}
+
+div#volume_bar {
+	float: left;
+	margin-top: 3px;
+}
+
+div#volume {
+	float: left;
+	background: #00f6ff;
+	height: 8px;
+	margin-top: 8px;
+	position: relative;
+	width: 100px;
+}
+
+div#volume img {
+	position: absolute;
+	top: -2px;
+	left: -1px;
+}
+
+div#volume_bar img:nth-child(3) {
+	margin: 5px 0 0 5px;
+}
+
+#next_video {
+	float: left;
+	margin: 220px 25px 0;
+}
+
+/* Column Styles */
+
+#columns {
+	width: 960px;
+	height: 400px;
+	margin: 0 auto;
+}
+
+#columns h3 {
+	padding: 20px 0;
+	font: 30px "Arial Black";
+	color: white;
+	text-align: center;
+}
+
+div.column {
+	width: 300px;
+	padding: 0 10px;
+	float: left;
+	color: white;
+}
+
+div.column h4 {
+	font: 48px "Berthold";
+	text-align: center;
+}
+div.column img {
+	opacity: 0.14;
+}
+
+div.column hr {
+	height: 2px;
+	border: 0;
+	background-color: #15e6ff;
+}
+
+div.column p {
+	font: 18px Calibri;
+	text-align: justify;
+}
+
+/* Footer Styles */
+
+footer {
+	background: -webkit-linear-gradient(#000000 0%, #494949 100%);
+	height: 35px;
+	clear: both;
+	text-align: center;
+	color: white;
+	width: 100%;
+	font: 12px "Arial Black";
+	padding: 15px 0 0 0;
+}
+
+
+
