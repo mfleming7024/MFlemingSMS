@@ -180,7 +180,15 @@ div#video_controls {
 
 div#seek_bar {
 	height: 12px;
+	float: left;
 	background: url(../images/scrubber_bg.gif) repeat;
+	width: 740px;
+	position: relative;
+	left: 0;
+}
+
+div#seek_bar #scrubber {
+	position: absolute;
 }
 
 div#video_controls a, img {
@@ -189,6 +197,7 @@ div#video_controls a, img {
 
 div#video_controls #playandpause {
 	float: left;
+	width: 10px;
 	margin: 5px 0 0 10px;
 }
 
@@ -197,6 +206,14 @@ div#video_controls p {
 	font: 16px Berthold;
 	float: left;
 	margin: 5px 0 0 10px;
+}
+
+div#video_controls p#duration {
+	margin: 5px 0 0 3px;
+}
+
+div#video_controls p:nth-child(5) {
+	margin: 5px 0 0 0;
 }
 
 div#video_controls #record {
@@ -210,7 +227,7 @@ div#video_controls #audio_sources {
 div#sources_container {
 	position: relative;
 	background: black;
-	opacity: 1;
+	opacity: 0;
 	float: left;
 	width: 100%;
 	height: 25px;
@@ -294,19 +311,28 @@ div.column {
 div.column h4 {
 	font: 48px "Berthold";
 	text-align: center;
+	margin-top: -55px;
+	float: left;
+	width: 100%;
 }
+
 div.column img {
 	opacity: 0.14;
 }
 
 div.column hr {
 	height: 2px;
+	float: left;
+	width: 100%;
+	margin-top: -3px;
 	border: 0;
 	background-color: #15e6ff;
 }
 
 div.column p {
 	font: 18px Calibri;
+	float: left;
+	width: 100%;
 	text-align: justify;
 }
 

@@ -7,8 +7,6 @@
         <link rel="stylesheet" href="css/styles.css" />
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-        <script type="text/javascript" src="js/demo.js"></script>
         <script type="text/javascript" src="js/swfobject.js"></script>
         <script type="text/javascript" src="js/sms_setup.js"></script>
  </head>
@@ -43,8 +41,8 @@
 			        </div>
 			        <div id="video_controls">
 			            	<div id="seek_bar"><img src="images/scrubber.png" id="scrubber" /></div>
-			            	<a href="#" id="playandpause"><img src="images/play.png" /></a>
-			            	<p>2:10 / 4:56</p>
+			            	<a href="#" id="playandpause"><img src="images/pause.png" /></a>
+			            	<p id="seek_time">-:-- /<p id="duration">-:--</p>
 			            	<a href="#" id="record"><img src="images/record.png" /></a>
 			            	<a href="#" id="audio_sources"><img src="images/microphone.png" /></a>
 			            	<img src="images/seperator.png" id="seperator" />
@@ -52,16 +50,12 @@
 			            	<div id="volume_bar">
 			            		<img src="images/vol_down.png" />
 			            		<div id="volume">
-			            			<a href="#"><img src="images/scrubber.png" /></a>
+			            			<a href="#"><img src="images/vol_scrubber.png" /></a>
 			            		</div>
 			            		<img src="images/vol_up.png" />
 			            	</div>
 			         </div>
-			          <div id="sources_container">
-		            	<ul>
-		            		<li><a href="#">Audio Source 1</a></li>
-		            		<li><a href="#">Audio Source 2</a></li>
-		            	</ul>
+			        <div id="sources_container">
 		            </div>
 			    </div>
 			
@@ -98,6 +92,8 @@
 	 <footer>
 	 	<p>Copyright 2013 &copy; Michael Fleming</p>
 	 </footer>
+	 
+     <script type="text/javascript" src="js/demo.js"></script>
 
    </body>
 </html>
