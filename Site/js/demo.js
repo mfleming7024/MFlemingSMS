@@ -9,6 +9,9 @@ var cameras = [];
 var videoSourcesHTML ="";
 var audioSourcesHTML ="";
 
+var d_cam = 0;
+var d_mic = 0;
+
 var x_pos = 0;
 var position_percentage = 0;
 
@@ -97,40 +100,62 @@ $("#record").on("click", function(e){
 		recording = true;
 	} else {
 		flash.stopRecording();
+		flash.startPlaying("hobbit_vp6.flv");
 		recording = false;
 	}
 	e.preventDefault();
 	return false;
 });
 
-$("#audio_sources").on("click", function(e){
+$("#audio_sources").mouseenter(function(){
 	$("#sources_container").html(
 		"<ul>" +
 			audioSourcesHTML +
-		 "</ul>"
-	).css({opacity: 1});
-	e.preventDefault();
-	return false;
+		"</ul>"
+	).fadeIn();
+		
+	$("#sources_container").find("ul li a").each(function(index){
+		$(this).on("click", function(e){
+			d_mic = index;
+			e.preventDefault();
+			return false;
+		});
+	});
 });
 
-$("#video_sources").on("click", function(e){
+$("#sources_container").mouseleave(function(){
+		$(this).fadeOut();
+});
+
+$("#video_sources").mouseenter(function(){
 	$("#sources_container").html(
 		"<ul>" +
 			videoSourcesHTML +
 		 "</ul>"
-	).css({opacity: 1});
-	e.preventDefault();
-	return false;
+	).fadeIn();
+	
+	$("#sources_container").find("ul li a").each(function(index){
+		$(this).on("click", function(e){
+			d_cam = index;
+			e.preventDefault();
+			return false;
+		});
+	});
 });
-
+	
+	
 var setupSources = function(){
 	for (var i = 0, max = cameras.length; i<max; i++) {
-		videoSourcesHTML += "<li>" + cameras[i] + "</li>";
+		videoSourcesHTML += "<li><a href='#'>" + cameras[i] + "</a></li>";
 	};
 	
 	for (var i = 0, max = audio.length; i<max; i++) {
-		audioSourcesHTML += "<li>" + audio[i] + "</li>";
+		audioSourcesHTML += "<li><a href='#'>" + audio[i] + "</a></li>";
 	};
+	
+	$(videoSourcesHTML).find("li").each(function(index){
+		console.log(index);
+	});
 
 }
 
