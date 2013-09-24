@@ -56,11 +56,6 @@ table {
 	src: url('../fonts/Berthold.otf');
 }
 
-
-
-
-
-
 div.wrapper {
 	width: 100%;
 	float: left;
@@ -72,6 +67,7 @@ div.wrapper#white {
 
 div.wrapper#blue {
 	background: #19c6dc;
+	position: relative;
 	height: 600px;
 }
 
@@ -289,6 +285,90 @@ div#volume_bar img:nth-child(3) {
 #next_video {
 	float: left;
 	margin: 220px 25px 0;
+}
+
+
+/* Comment Styles */
+
+div#chat_room_container {
+	position: absolute;
+	top: 5px;
+	right: 0;
+	height: 590px;
+	width: 185px;
+	overflow: auto;
+}
+
+div#chat_room_wrapper {
+	position: absolute;
+	background: white;
+	right: 0;
+	width: 165px;
+	top: 0;
+}
+
+div.comment {
+	margin-bottom: 10px;
+	float: left;
+	width: 100%;
+	position: relative;
+}
+
+div#comment_controls + div  {
+	margin-top: 50px;
+}
+
+div.comment .header {
+	clear: both;
+	float: left;
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	top: 0;
+	left: -10px;
+	background: url("../images/comment_header.png") no-repeat;
+}
+
+div.comment .header h1 {
+	float: left;
+	font: 12px "Arial Black"; 
+	color: white;
+	padding-left: 5px;
+}
+
+div.comment .header h2 {
+	float: right;	
+	font: 12px "Arial Black"; 
+	color: #23e1fd;
+	padding-right: 3px;
+}
+
+div.comment p {
+	float: left;
+	font: 9px "Arial Black";
+	padding: 20px 2px 0 2px;
+}
+
+div#comment_controls {
+	padding-top: 10px;
+	background: white;
+	position: absolute;
+	height: 30px;
+	top: 0;
+	z-index: 100;
+}
+
+div#comment_controls input {
+	float: left;
+	width: 100px;
+	margin-left: 5px;
+	border-radius: 6px;
+}
+
+div#comment_controls button {
+	float: right;
+	width: 40px;
+	margin-right: 5px;
 }
 
 /* Column Styles */
